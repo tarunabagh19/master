@@ -1,0 +1,65 @@
+<form [formGroup]="filterForm" class="filter-form">
+  <label for="yearRange">Select Year Range:</label>
+  <select id="yearRange" formControlName="yearRange" (change)="applyFilter()">
+    <option value="all">All Years</option>
+    <option value="last3">Last 3 Years</option>
+  </select>
+</form>
+
+<div class="charts-container">
+  <div class="chart-box">
+    <h3>Bar Chart</h3>
+    <canvas baseChart
+            [data]="{ labels: barChartLabels, datasets: barChartData }"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            (chartClick)="chartClicked($event)"
+            [type]="barChartType">
+    </canvas>
+  </div>
+
+  <div class="chart-box">
+    <h3>Line Chart</h3>
+    <canvas baseChart
+            [data]="{ labels: lineChartLabels, datasets: lineChartData }"
+            [options]="lineChartOptions"
+            [legend]="lineChartLegend"
+            [type]="lineChartType">
+    </canvas>
+  </div>
+</div>
+<div class="p-4" >
+  <h2 class="text-2xl font-bold mb-4">Product Sales</h2>
+  <div class="overflow-x-auto rounded-lg shadow">
+    <table class="min-w-full divide-y divide-gray-200">
+      <thead class="bg-gray-100">
+        <tr>
+          <th class="px-6 py-3 text-left text-sm font-semibold text-gray-600">Product</th>
+          <th class="px-6 py-3 text-left text-sm font-semibold text-gray-600">Units Sold</th>
+          <th class="px-6 py-3 text-left text-sm font-semibold text-gray-600">Revenue (£)</th>
+          <th class="px-6 py-3 text-left text-sm font-semibold text-gray-600">Date</th>
+        </tr>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-100">
+        <tr>
+          <td class="px-6 py-4 text-sm text-gray-700">Wireless Headphones</td>
+          <td class="px-6 py-4 text-sm text-gray-700">120</td>
+          <td class="px-6 py-4 text-sm text-gray-700">2,400</td>
+          <td class="px-6 py-4 text-sm text-gray-700">2025-05-10</td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="px-6 py-4 text-sm text-gray-700">Smartwatch</td>
+          <td class="px-6 py-4 text-sm text-gray-700">95</td>
+          <td class="px-6 py-4 text-sm text-gray-700">3,800</td>
+          <td class="px-6 py-4 text-sm text-gray-700">2025-05-09</td>
+        </tr>
+        <tr>
+          <td class="px-6 py-4 text-sm text-gray-700">Bluetooth Speaker</td>
+          <td class="px-6 py-4 text-sm text-gray-700">78</td>
+          <td class="px-6 py-4 text-sm text-gray-700">1,560</td>
+          <td class="px-6 py-4 text-sm text-gray-700">2025-05-08</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
