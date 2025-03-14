@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+.filter-form {
+  margin-bottom: 20px;
+}
+
+.filter-form label {
+  margin-right: 10px;
+}
+
+.filter-form select {
+  margin-right: 10px;
+}
+
+.charts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.chart-box {
+  flex: 1 1 45%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+}
