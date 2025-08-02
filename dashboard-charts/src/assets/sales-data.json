@@ -1,4 +1,8 @@
 [
+
+  { "year": "2018", "region": "North America", "product": "AI Analytics", "sales": 120 },
+  { "year": "2018", "region": "Europe", "product": "AI Analytics", "sales": 185 },
+  { "year": "2018", "region": "Asia", "product": "AI Analytics", "sales": 145 },
   
   { "year": "2019", "region": "North America", "product": "AI Analytics", "sales": 140 },
   { "year": "2019", "region": "Europe", "product": "AI Analytics", "sales": 195 },
